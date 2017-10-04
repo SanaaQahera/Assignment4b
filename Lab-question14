@@ -5,7 +5,7 @@ int add(arr[], int j,int n, int sum)
 {
    if (j<n)
    {
-   	sum = sum + add(arr[j],j+1,n,sum);
+   	sum = sum + add(arr,j+1,n,sum);
    }
    else 
    return sum;
@@ -23,7 +23,7 @@ int main() {
 		arr[i] = el;
 		
 	}
-	ans = add(arr[n-1],0,n,0);
+	ans = add(arr,0,n,0);
 	cout <<"Sum of elements of the array = "<<ans;
 	return 0;
 }
